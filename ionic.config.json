@@ -1,0 +1,7 @@
+{
+  "name": "test-task-store",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
