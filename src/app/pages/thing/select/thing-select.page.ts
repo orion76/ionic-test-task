@@ -45,7 +45,6 @@ export class ThingSelectPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log('11111111111111',this.maxVolume);
     this.entities$ = this.store.select(thingSelectors.selectByVolume(this.maxVolume));
     this.entitiesCount$ = this.entities$.pipe(
       map((entities) => entities.length),

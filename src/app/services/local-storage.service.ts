@@ -43,7 +43,6 @@ export class LocalStorageService implements IDataService {
   delete<M extends IModel>(type: TModels, ids: number[]): Observable<M[]> {
 
     return this.getAll(type).pipe(
-      log('delete items', ids),
       map((entities) => {
         ids.forEach((id) => {
           const index = entities.findIndex((entity) => entity.id === id);

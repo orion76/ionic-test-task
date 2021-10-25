@@ -38,21 +38,16 @@ export class DataInterceptor implements HttpInterceptor {
           id = this.getId(url);
           if (id) {
             ret = next.handle(this.replaceUrl(modelType, req)).pipe(
-              map((response: HttpResponse<IModel[]>) => {
-                return response.body.find((item) => item.id === id);
-              })
+              map((response: HttpResponse<IModel[]>) => response.body.find((item) => item.id === id))
             );
           } else {
             ret = next.handle(this.replaceUrl(modelType, req));
           }
           break;
         case 'POST':
-          ret = this.store.pipe(
-            // select(selectMaxId),
-            // take(1),
-            // map((last_id: number) => new HttpResponse({status: 200, body: {...req.body, id: ++last_id}})),
-            // log('select(selectMaxId)'),
-          );
+          /*
+          * @TODO
+          */
           break;
         case 'PUT':
           ret = of(new HttpResponse({status: 200, body: {...req.body}}));

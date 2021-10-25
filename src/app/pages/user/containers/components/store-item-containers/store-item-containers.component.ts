@@ -84,8 +84,6 @@ export class StoreItemContainersComponent implements OnInit {
 
   addContainer() {
     const eventId = this.router.url;
-    console.log('volume', this.volume);
-
     const {total, busy} = this.volume;
 
     const maxVolume = total !== undefined ? total - busy : undefined;
