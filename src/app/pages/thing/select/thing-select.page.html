@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>Thing select</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-radio-group>
+        <ion-list>
+            <ng-container *ngIf="entitiesCount$ | async as entitiesCount; else listEmpty">
+                <ion-item *ngFor="let entity of entities$ | async" (click)="select(entity)">
+                    <fa-icon [icon]="entity.icon| faIcon"></fa-icon>
+                    <ion-label>{{entity.name}}</ion-label>
+                    <ion-label slot="end">{{entity.volume}} cm<sup>2</sup></ion-label>
+                    <ion-radio slot="end"></ion-radio>
+                </ion-item>
+            </ng-container>
+        </ion-list>
+    </ion-radio-group>
+</ion-content>
+<ng-template #listEmpty>
+    <ion-item class="ion-justify-items-center">
+
+        <ion-badge color="medium"> List empty</ion-badge>
+    </ion-item>
+</ng-template>

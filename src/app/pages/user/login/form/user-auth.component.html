@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+    <ion-card>
+
+        <ion-card-header>
+            <ion-card-title>My store Login</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+
+
+            <ion-item>
+                <ion-input name="login" formControlName="login" type="text" placeholder="Name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input name="pass" formControlName="pass" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+
+
+        </ion-card-content>
+        <ion-footer>
+            <ion-item *ngIf="error" color="danger" class="error-message">
+                <ion-label>{{error}}</ion-label>
+            </ion-item>
+
+
+            <ion-button size="large" type="submit" (click)="login()" [disabled]="form.invalid" expand="block">Login
+            </ion-button>
+
+        </ion-footer>
+    </ion-card>
+</form>

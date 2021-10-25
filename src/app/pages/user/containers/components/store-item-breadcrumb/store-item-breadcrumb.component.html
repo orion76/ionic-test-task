@@ -1,0 +1,6 @@
+<ion-buttons>
+<!--    <ion-item button (click)="openContainer()" >My Store</ion-item>-->
+    <ion-button *ngFor="let entity of entities$|async" (click)="openContainer(entity.id)" >
+        <ion-label>{{entity.name}}</ion-label>
+    </ion-button>
+</ion-buttons>

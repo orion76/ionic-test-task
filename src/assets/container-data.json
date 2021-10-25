@@ -1,0 +1,44 @@
+  [
+    {
+      "id": 1,
+      "type": "container",
+      "name": "Wallet",
+      "icon": "folder-plus",
+      "description": "A wallet is a flat case or pouch that can be used to carry such small personal items as paper currency, credit cards, and identification documents (driver's license, identification card, club card, etc.), photographs, transit pass, business cards and other paper or laminated cards. Wallets are generally made of leather or fabrics, and they are usually pocket-sized and foldable.",
+      "volume": 100
+    },
+    {
+      "id": 2,
+      "type": "container",
+      "name": "Closet",
+      "icon": "folder-plus",
+      "description": "A closet (especially in North American usage) is an enclosed space, with a door, used for storage, particularly that of clothes. Fitted closets are built into the walls of the house so that they take up no apparent space in the room. Closets are often built under stairs, thereby using awkward space that would otherwise go unused.",
+      "volume": 200
+    },
+    {
+      "id": 3,
+      "type": "container",
+      "name": "Organizer box",
+      "icon": "folder-plus",
+      "description": "An organizer box is a type of storage box featuring small compartments for sorting components like screws, nails, bolts, washers etc or for pills. The compartments can be separated by removable dividers.",
+      "volume": 400
+    },
+    {
+      "id": 4,
+      "type": "container",
+      "name": "Suitcase",
+      "icon": "folder-plus",
+      "description": "A suitcase is a form of luggage. It is often a somewhat flat, rectangular-shaped bag with rounded square corners. Vinyl, leather or cloth suitcases may have a metal frame. Hardshell suitcases open on hinges like a door.",
+      "volume": 800
+    },
+    {
+      "id": 5,
+      "type": "container",
+      "name": "Portmanteau",
+      "icon": "folder-plus",
+      "description": "A portmanteau is a piece of luggage, usually made of leather and opening into two equal parts. Some were large, upright, and hinged at the back and enabled hanging up clothes in one half, while others are much smaller bags (such as Gladstone bags) with two equally sized compartments.",
+      "volume": 1600
+    }
+  ]
+
+

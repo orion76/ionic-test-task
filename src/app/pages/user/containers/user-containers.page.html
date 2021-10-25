@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ng-container *ngIf="parent$ | async as parent; else rootContainer">
+            <ion-button (click)="openContainer(parent?.parent)" slot="start" color="dark" expand="full" size="small"
+                        fill="clear">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </ion-button>
+            <ion-title>{{parent.item.name}}</ion-title>
+        </ng-container>
+
+
+        <ng-template #rootContainer>
+            <ion-title>My store</ion-title>
+            <ion-buttons slot="start">
+                <ion-button routerLink="/">
+                    <ion-icon name="home-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ng-template>
+        <ion-buttons slot="end">
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <store-item-breadcrumb *ngIf="parent$|async as current" [current]="current"></store-item-breadcrumb>
+    <ng-container *ngIf="volume$| async as volume">
+        <ion-item>
+            <ion-label>
+                <ion-badge color="default"  >busy/total</ion-badge>
+            </ion-label>
+            <ion-label slot="end">
+                <ion-badge color="success" >{{volume.busy}} / {{volume.total|isUndefined:'any'}}</ion-badge>
+            </ion-label>
+        </ion-item>
+
+        <store-item-containers [volume]="volume" [parent$]="parent$"></store-item-containers>
+        <store-item-things [volume]="volume" [parent$]="parent$"></store-item-things>
+
+    </ng-container>
+
+
+</ion-content>
+<ion-footer></ion-footer>

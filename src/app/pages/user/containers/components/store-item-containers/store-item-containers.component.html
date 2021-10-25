@@ -1,0 +1,31 @@
+<ion-list>
+    <ion-list-header>
+        <ion-label><h2>Containers</h2></ion-label>
+
+        <ion-button size="large" color="success" (click)="addContainer()">
+            <ion-icon name="bag-add-outline"></ion-icon>
+        </ion-button>
+    </ion-list-header>
+    <ng-container *ngIf="entitiesCount$ | async as entitiesCount; else listEmpty">
+        <ion-item *ngFor="let entity of entities$|async">
+            <fa-icon [icon]="entity.item.icon| faIcon"></fa-icon>
+            <ion-button (click)="openContainer(entity)" expand="full" size="small" fill="clear">
+                <ion-label>{{entity.item.name}}</ion-label>
+            </ion-button>
+            <ion-label slot="end" >{{entity.item.volume}} cm<sup>2</sup></ion-label>
+
+            <ion-buttons slot="end">
+                <ion-button (click)="showMenu(entity)">
+                    <ion-icon  name="menu-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-item>
+    </ng-container>
+    <ng-template #listEmpty>
+        <ion-item class="ion-justify-items-center">
+
+            <ion-badge color="medium"> List empty</ion-badge>
+        </ion-item>
+    </ng-template>
+
+</ion-list>

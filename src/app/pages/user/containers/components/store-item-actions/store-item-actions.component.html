@@ -1,0 +1,23 @@
+<ion-list>
+    <ion-item>
+        <ion-label>
+            {{entity.item.name}}
+        </ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="entity.item.type==='container'">
+        <ion-label>
+            Free volume
+        </ion-label>
+        <ion-note slot="end">
+            {{freeVolume}}
+        </ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-note>
+            <p>
+                {{entity.item.description}}
+            </p>
+        </ion-note>
+    </ion-item>
+</ion-list>

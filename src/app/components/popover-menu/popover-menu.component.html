@@ -1,0 +1,5 @@
+<ion-list>
+    <ion-item button *ngFor="let item of items" (click)="item.command()">
+        <ion-label>{{item.text}}</ion-label>
+    </ion-item>
+</ion-list>

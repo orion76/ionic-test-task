@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "type": "thing",
+    "name": "Keys",
+    "icon": "box",
+    "description": "Keys from castles",
+    "volume": 1
+  },
+  {
+    "id": 2,
+    "type": "thing",
+    "name": "Credit card",
+    "icon": "box",
+    "description": "A credit card is a payment card issued to users (cardholders) to enable the cardholder to pay a merchant for goods and services based on the cardholder's accrued debt (i.e., promise to the card issuer to pay them for the amounts plus the other agreed charges)",
+    "volume": 2
+  },
+  {
+    "id": 3,
+    "type": "thing",
+    "name": "Smartphone",
+    "icon": "box",
+    "description": "A smartphone is a portable device that combines mobile telephone and computing functions into one unit.",
+    "volume": 4
+  },
+  {
+    "id": 4,
+    "type": "thing",
+    "name": "Wrist watch",
+    "icon": "box",
+    "description": "A watch is a portable timepiece intended to be carried or worn by a person. It is designed to keep a consistent movement despite the motions caused by the person's activities.",
+    "volume": 8
+  },
+  {
+    "id": 5,
+    "type": "thing",
+    "name": "Glasses",
+    "icon": "box",
+    "description": "Glasses, also known as eyeglasses or spectacles, are vision eyewear, consisting of glass or hard plastic lenses mounted in a frame that holds them in front of a person's eyes, typically utilizing a bridge over the nose and hinged arms (known as temples or temple pieces) which rest over the ears.",
+    "volume": 16
+  },
+  {
+    "id": 6,
+    "type": "thing",
+    "name": "Cologne water",
+    "icon": "box",
+    "description": "Is a mixture of fragrant essential oils or aroma compounds, fixatives and solvents, usually in liquid form, used to give the human body, animals, food, objects, and living-spaces an agreeable scent.",
+    "volume": 32
+  },
+  {
+    "id": 7,
+    "type": "thing",
+    "name": "Notebook",
+    "icon": "box",
+    "description": "Wirebound memo books for both professional and academic needs.",
+    "volume": 64
+  },
+  {
+    "id": 8,
+    "type": "thing",
+    "name": "Fountain pen",
+    "icon": "box",
+    "description": "A fountain pen is a writing instrument which uses a metal nib to apply a water-based ink to paper. ",
+    "volume": 128
+  }
+]
