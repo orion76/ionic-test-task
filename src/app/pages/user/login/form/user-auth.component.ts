@@ -21,8 +21,8 @@ export class UserAuthComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      login: ['any', [Validators.required]],
-      pass: ['iW1OddOO', [Validators.required]],
+      login: [null, [Validators.required]],
+      pass: [null, [Validators.required]],
     });
   }
 
